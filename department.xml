@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+<class name="com.srinu.pojo.Department" table="department">
+<id name="deparmentid" type="int">
+<column name="depid" length="15"/>
+<generator class="assigned"></generator>
+</id>
+
+<property name="departmentname" type="java.lang.String">
+<column name="dname" length="30"/>
+</property>
+
+<set name="student" cascade="all" lazy="true">
+<key column="depid"/>
+<one-to-many class="com.srinu.pojo.Student"/>
+</set>
+
+</class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.srinu.pojo.Student" table="student">
+<id name="studentid" type="int">
+<column name="sid" length="30"/>
+<generator class="assigned"></generator>
+</id>
+
+<property name="studentname" type="java.lang.String">
+<column name="sname" length="30"/>
+</property>
+
+<property name="studentaddress" type="java.lang.String">
+<column name="saddress" length="30"/>
+</property>
+
+</class>
+</hibernate-mapping>
